@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>portfolio | Mark Dave D. Calizar</title>
+    
+    <link rel="stylesheet" href="index.css"  />
+ 
+  </head>
+
+
+
+  <body>
+    
+
+      
+      
+      <div id="Header">
+        <div class=" container">
+
+            <div id="animated-bg"></div>
+
+          <nav>
+            <!-- From Uiverse.io by ZacharyCrespin --> 
+                    <div class="loader">
+             <div class="loader-square"></div>
+              <div class="loader-square"></div>
+              <div class="loader-square"></div>
+              <div class="loader-square"></div>
+            <div class="loader-square"></div>
+              <div class="loader-square"></div>
+               <div class="loader-square"></div>
+  </div>
+           
+             
+     <!-- Navigation Menu -->
+<nav>
+  <ul>
+    <li><a href="#Header" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About Me</a></li>
+    <li><a href="#contact" class="nav-link">Contact Me</a></li>
+    <li><a href="#social-media" class="nav-link">Social Media</a></li>
+  </ul>
+</nav>
+
+
+          </nav>
+          
+
+  <div class="header-text">
+  <p>Second-Year College Student at STI Alaminos</p>
+  <h1>Hi, I am <span>Mark Dave</span><br>Calizar form Alaminos City, Pangasinan</h1>
+</div>
+
+          
+        </div>
+      </div>
+     <div id="about">
+       
+    <div class="container">
+
+        <div class="row">
+            <div class="about-col-1">
+                <img src="mark/cd6dcf0e-b485-4dd0-8695-b63e75760a2e.jpg" alt="Description of the image">
+            </div>
+        </div>
+        
+           
+           </div>
+           <div class="about-col-1"> 
+           <h1 class=" sub-title"> About me </h1>
+           <p>Hello! I'm Mark Dave D. Calizar, a second-year Information Technology student at <strong>STI Alaminos</strong>. My portfolio showcases my growing skills and passion in areas like <span>Encoder, and Edetor</span>. Welcome!</p>
+
+        <!-- Tab Titles -->
+<div class="tab-titles">
+    <p class="tab-Links active-Links" onclick="opentab('Skills', this)">Skills</p>
+    <p class="tab-Links" onclick="opentab('Awards', this)">Athletes</p>
+    <p class="tab-Links" onclick="opentab('Education', this)">Education & Background</p>
+</div>
+<script>
+
+    // Add event listeners to all social icons for hover effect and click logging
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Select all social media icons
+  const socialIcons = document.querySelectorAll('.social-icon');
+
+  // Add mouseover event to trigger hover effect and log to console
+  socialIcons.forEach(icon => {
+    icon.addEventListener('mouseover', function() {
+      // You can trigger custom hover effects here (if you want more JS-based animations)
+      console.log("Hovered over: " + icon.getAttribute('aria-label'));
+    });
+
+    // Add click event to log when an icon is clicked
+    icon.addEventListener('click', function() {
+      const platform = icon.getAttribute('aria-label');
+      console.log("Redirecting to " + platform);
+    });
+  });
+});
+
+
+</script>
+
+
+
+
+<!-- Skills Tab Content -->
+<div class="tab-contents active-tab" id="Skills">
+  <h2>Skills Background</h2>
+  <ul class="skills-list">
+    <li>
+      <strong>Photoshop</strong><br>
+      Skilled in editing images, creating digital posters, and UI mockups for projects. Used for both academic and extracurricular activities.
+    </li>
+    <li>
+      <strong>Video Editing</strong><br>
+      Capable of editing content using tools like CapCut or Adobe Premiere Pro. Created school video presentations and short promotional clips.
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+<!-- Experience Tab Content -->
+<div class="tab-contents" id="Awards">
+  <h2>Awards</h2>
+  <ul>
+    <li>
+      <strong>2009 – 2016:</strong><br>
+      <em>athletes of Run, triple Jump  – Inerangan Elementary School </em><br>
+      athletes of Run, triple Jump  2016<br>
+    </li>
+    <li>
+        <strong>2017 – 2023:</strong><br>
+        <em>athletes of Run, chess  – Inerangan Elementary School </em><br>
+        athletes of Run, chess  2023<br>
+        
+        
+      </li>
+  </ul>
+</div>
+
+
+
+
+
+
+
+<!-- Education Tab Content -->
+<div class="tab-contents" id="Education">
+  <h2>Educational Background</h2>
+  <ul class="education-list">
+    <li class="education-item">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Primary </h3>
+      <p><strong> Inerangan Elementary School - </strong>  <em>Alaminos City, Pangasinan</em></p>
+      <p>Grade 1 to 6</p>
+  
+    
+
+    </li>
+
+    <li class="education-item">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>Secondary </h3>
+      <p><strong> The Great Plebiean College  - </strong> <em>Alaminos City, Pangasinan</em> </p>
+      <p>Grade 7 to 12</p>
+  
+      
+    </li>
+    
+    
+    <li class="education-item">
+      <i class="fas fa-graduation-cap"></i>
+      <h3>  College </h3>
+      <p> <strong> Present </strong> </p>
+      <p><strong>  STI-Alaminos  - </strong> <em>Alaminos City Pangasinan</em> </p>
+      
+
+    </li>
+  </ul>
+</div>
+
+           </div>
+        </div>
+    </div>
+
+
+
+    <script>
+      function opentab(tabName, element) {
+        const tabLinks = document.querySelectorAll(".tab-Links");
+        const tabContents = document.querySelectorAll(".tab-contents");
+    
+        tabLinks.forEach(link => link.classList.remove("active-Link"));
+        tabContents.forEach(tab => tab.classList.remove("active-tab"));
+    
+        element.classList.add("active-Link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
+<!-- Portfolio Section -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="portfolio-gallery">
+            <div class="portfolio-item">
+                <a href="pictures" data-lightbox="portfolio">
+                    <img src="your-image-url.jpg" alt="Sample of Incoder">
+                </a>
+                <h3>Incoder</h3>
+                <p class="portfolio-description">
+                    Incoder is a powerful code editor designed for developers who want a seamless and efficient coding experience. With intuitive features, customizable themes, and real-time collaboration, Incoder makes coding faster and easier. It supports multiple programming languages, syntax highlighting, and advanced debugging tools.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Contact Section with Contact Form -->
+
+<div id="contact">
+  <div class="container">
+    <h1 class="sub-title" style="text-align: center;">Get In Touch</h1>
+    
+    <form action="#" method="post" class="contact-form">
+      <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+  
+      <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+  
+      <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      </div>
+  
+      <button type="submit" class="btn">Send Message</button>
+  </form>
+    <p class="connect-text">
+      I’d love to connect! Feel free <span>to reach out through any of the channels below.</span>
+    </p>
+    
+
+  
+  </div>
+</div>
+
+
+<!-- Contact Columns -->
+<div class="contact-columns">
+  <!-- Email Column -->
+  <div class="contact-col">
+
+    <i class="fas fa-envelope fa-2x"></i>
+    <h2>Email</h2>
+    <p>
+      <a href="mailto: calizardave572@gmail.com" class="contact-link" aria-label="Send email to  calizardave572@gmail.com">
+       calizardave572@gmail.com
+      </a>
+    </p>
+    <a href="mailto: calizardave572@gmail.com" class="btn" aria-label="Send email">Send Email</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to= calizardave572@gmail.com" target="_blank" class="btn" aria-label="Open email in Gmail" style="margin-top: 10px;">
+      Open in Gmail
+    </a>
+  </div>
+
+<!-- Contact Section - Phone Column -->
+<div class="contact-col">
+  <i class="fas fa-phone fa-2x" aria-hidden="true"></i>
+  <h2>Phone</h2>
+  <p>
+    <a href="tel:+639811 699 709"
+       class="contact-link"
+       aria-label="Call phone number +63 9811 699 709">
+      +63 9811 699 709
+    </a>
+  </p>
+  <div class="btn-group">
+    <a href="tel:+639811699709"
+       class="btn"
+       aria-label="Call me at +63 9811 699 709">
+      📞 Call Me
+    </a>
+    <a href="https://wa.me/639811699709"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="btn"
+       aria-label="Send a message on WhatsApp to +63 9811 699 709">
+      💬 Message on WhatsApp
+    </a>
+  </div>
+</div>
+
+
+<!-- Add this in your <head> to load Font Awesome -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+
+<!-- Social Media Section -->
+<section id="social-media">
+  <div class="container">
+    <h2>Follow Me</h2>
+    <p>Stay connected with me on social media:</p>
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1AFFpkXcdu/" target="_blank" class="social-icon" aria-label="Facebook Profile">
+          <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.instagram.com/calizardave?igsh=MWlyMXhlYzk0bDVoNw==" target="_blank" class="social-icon" aria-label="Instagram Profile">
+          <i class="fab fa-instagram"></i>
+      </a> 
+      <a href="https://github.com/davekol671" target="_blank" class="social-icon" aria-label="GitHub Profile">
+          <i class="fab fa-github"></i>
+      </a>
+       <a href="https://www.tiktok.com/@zyro118?_t=ZS-8w5pEzQQxGM&_r=1" target="_blank" class="social-icon" aria-label="TikTok Profile">
+        <i class="fab fa-tiktok"></i>
+       </a>
+    
+  </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    <p>&copy; 2025 | MarkDaveCalizar | All Rights Reserved</p>
+
+    
+  <!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top-btn" aria-label="Back to top">
+  <span class="back-to-top-text">Back to Top</span> 
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="back-to-top-icon">
+      <path d="M12 19V6M5 13l7-7 7 7"/>
+  </svg>
+</button>
+
+
+
+<style>
+ /* Basic styling for the Back to Top button */
+.back-to-top-btn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position relative to the viewport */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it's on top of other elements */
+    border: none;
+    outline: none;
+    background-color: rgba(30, 30, 30, 0.8); /* Dark background */
+    color: #ddd; /* Light text color */
+    cursor: pointer;
+    padding: 12px 20px; /* Slightly bigger padding */
+    border-radius: 50%; /* Circular button */
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, scale 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Default shadow for visibility */
+}
+
+.back-to-top-btn:hover {
+    background-color: rgba(60, 60, 60, 0.9); /* Darker background on hover */
+    color: #fff; /* Lighter text on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Larger shadow for hover */
+    transform: scale(1.1); /* Scale the button slightly on hover */
+}
+
+.back-to-top-btn.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0); /* Smooth transition for button appearance */
+}
+
+.back-to-top-text {
+    display: inline-block;
+    margin-right: 10px;
+    transition: opacity 0.3s ease; /* Fade out text smoothly */
+}
+
+.back-to-top-icon {
+    fill: #ddd;
+    transition: transform 0.3s ease;
+}
+
+.back-to-top-btn:hover .back-to-top-icon {
+    transform: translateY(-3px); /* Icon slightly moves up on hover */
+}
+
+/* Responsive design for mobile */
+@media screen and (max-width: 600px) {
+    .back-to-top-btn {
+        font-size: 14px;
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .back-to-top-text {
+        display: none; /* Hide text on smaller screens for space */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .back-to-top-btn {
+        font-size: 12px;
+        padding: 8px 12px; /* Further reduce size on very small screens */
+    }
+}
+
+</style>
+
+<script>
+ // Get the button
+let backToTopBtn = document.getElementById("backToTop");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.classList.add("show");
+    } else {
+        backToTopBtn.classList.remove("show");
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.addEventListener("click", function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+
+</script>
+  
+</div>
+  </body>
+</html>
