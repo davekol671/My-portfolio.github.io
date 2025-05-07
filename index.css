@@ -67,29 +67,72 @@ body {
   nav ul li a:hover {
     color: #00ffff;
   }
-/* 3D Glassmorphic Header */
+/* Header Section */
 #Header {
-    position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, #1f1c2c, #928dab);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    color: #fff;
-  }
-  
-  #Header::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: -100px;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
-    animation: floatGlow 12s linear infinite;
-    z-index: 0;
-  }
+  background-color: #f0f0f0; /* Light gray */
+  color: #333;
+  padding: 40px 20px;
+  position: relative;
+}
+
+/* Remove 3D-style background */
+#animated-bg {
+  display: none; /* Or remove entirely if unused */
+}
+
+/* Loader Styling (No 3D effect, just simple dots) */
+.loader {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.loader-square {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  animation: pulse 1.2s infinite ease-in-out both;
+  border-radius: 2px;
+}
+
+.loader-square:nth-child(2) { animation-delay: 0.2s; }
+.loader-square:nth-child(3) { animation-delay: 0.4s; }
+.loader-square:nth-child(4) { animation-delay: 0.6s; }
+.loader-square:nth-child(5) { animation-delay: 0.8s; }
+.loader-square:nth-child(6) { animation-delay: 1s; }
+.loader-square:nth-child(7) { animation-delay: 1.2s; }
+
+@keyframes pulse {
+  0%, 80%, 100% { transform: scale(0.8); opacity: 0.3; }
+  40% { transform: scale(1); opacity: 1; }
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #007BFF;
+}
+
   
   @keyframes floatGlow {
     0% {
@@ -109,7 +152,7 @@ body {
     text-align: center;
     padding: 20px;
     backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(56, 56, 56, 0.05);
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     transition: transform 0.3s ease;
@@ -141,7 +184,7 @@ body {
 .tab-contents {
   display: none;
   padding: 15px;
-  background-color: #3f3f3f;
+  background-color: #3a3a3a;
   border-radius: 6px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Stronger box shadow */
@@ -568,124 +611,77 @@ ul.skills-list li:hover, .tab-contents ul li:hover {
     font-weight: bold;
 }
 
-/* Contact Columns Styling */
-.contact-columns {
-  display: flex;
-  justify-content: center; /* Center the contact columns container */
-  gap: 40px;
-  padding: 40px 0;
-  flex-wrap: wrap;
-}
-
+/* Contact column with 3D card effect */
 .contact-col {
-  background-color: #fff;
-  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #e6e6e6);
+  padding: 25px;
+  border-radius: 12px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
-  flex-basis: 45%;
-  margin: 10px 0;
-  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.15),
+              -4px -4px 12px rgba(255, 255, 255, 0.8);
+  max-width: 320px;
+  margin: auto;
+  transform: perspective(1000px) rotateX(1deg) rotateY(-1deg);
+  transition: transform 0.3s ease;
 }
 
 .contact-col:hover {
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 }
 
+/* Icon styling */
 .contact-col i {
-  color: #007BFF;
-  margin-bottom: 15px;
-  font-size: 2.5em; /* Increase icon size */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); /* Subtle shadow to give depth */
+  color: #4CAF50;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
-.contact-col i:hover {
-  transform: translateY(-5px); /* Lift the icon */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow when hovered for 3D effect */
-}
-
+/* Heading styling */
 .contact-col h2 {
-  font-size: 1.8em;
+  font-size: 1.6em;
+  margin: 10px 0;
+  color: #222;
+}
+
+/* Phone link styling */
+.contact-link {
   color: #333;
-  margin-bottom: 15px;
-}
-
-.contact-col p {
-  font-size: 1.1em;
-  color: #555;
-}
-
-.contact-col .contact-link {
-  color: #007BFF;
-  font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s ease;
+  font-size: 1.15em;
+  font-weight: 500;
+  text-shadow: 0.5px 0.5px 1px rgba(0,0,0,0.1);
 }
 
-.contact-col .contact-link:hover {
-  color: #0056b3;
+.contact-link:hover {
+  color: #4CAF50;
+  text-decoration: underline;
 }
 
-.contact-col .btn-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.contact-col {
-  text-align: center;
+/* Button group layout */
+.btn-group {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Horizontally centers inner content */
+  gap: 12px;
+  margin-top: 18px;
 }
 
-.contact-col a.btn {
-  margin-top: 10px;
-  width: fit-content; /* Prevent full-width buttons */
+/* 3D Button styles */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(to bottom, #4CAF50, #388E3C);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  box-shadow: 0 6px #2e7d32;
+  transition: all 0.2s ease;
+  position: relative;
 }
 
-.btn-group {
-  justify-content: center;
-}
-
-.contact-col .btn:hover {
-  background-color: #0056b3;
-}
-
-/* For smaller screens */
-@media (max-width: 768px) {
-  /* Contact Form adjustments */
-  .contact-form {
-      padding: 20px;
-  }
-
-  .contact-form .form-group input,
-  .contact-form .form-group textarea {
-      font-size: 0.9em;
-      padding: 10px;
-  }
-
-  .contact-form button {
-      font-size: 1em;
-      padding: 10px 20px;
-  }
-
-  /* Contact Columns adjustments */
-  .contact-columns {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .contact-col {
-      flex-basis: 100%;
-      margin-bottom: 20px;
-  }
-
-  .contact-col h2 {
-      font-size: 1.5em;
-  }
+.btn:active {
+  box-shadow: 0 2px #2e7d32;
+  transform: translateY(4px);
 }
 
 ocial-icons {
